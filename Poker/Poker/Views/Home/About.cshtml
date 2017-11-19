@@ -1,7 +1,10 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>This is an application to evaluate randomly selected poker hands.</p>
+
+<p>The C# controller randomly sorts the cards, selects the first five cards as a hand, orders them by their rank and 
+	evaluates them against logic to determine poker hands. LINQ is used to group the hand by properties and return 
+	a specific string for each possibility. A Tuple is created using the hand and the string from the hand evaluation, 
+	then its called into the Angular as a Json object. The Angular sets the hand as an array and the evaluation result 
+	as a string. They are called into the view and the appropriate information is displayed on a user interface.</p>
+
