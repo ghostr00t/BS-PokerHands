@@ -1,0 +1,40 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+}
+
+<div ng-app="pokerApp" ng-controller="PokerController">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Hand Rank</div>
+				<div class="panel-body">
+					<ol>
+						<li>Royal flush (A, K, Q, J, 10, all the same suit)</li>
+						<li>Straight flush (Five cards in a sequence, all in the same suit)</li>
+						<li>Four of a kind (All four cards of the same rank)</li>
+						<li>Full house (Three of a kind with a pair)</li>
+						<li>Flush (Any five cards of the same suit, but not in a sequence)</li>
+						<li>Straight (Five cards in a sequence, but not of the same suit)</li>
+						<li>Three of a kind (Three cards of the same rank)</li>
+						<li>Two pair (Two different pairs)</li>
+						<li>Pair (Two cards of the same rank)</li>
+						<li>High Card (Highest card when no hands made)</li>
+					</ol>
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-heading"><h4>{{hand}}</h4></div>
+							<div class="panel-body">
+								<div class="col-md-2" ng-repeat="card in cards track by $index"><div class="well">{{card.Value}} - {{card.Suit}}</div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer"><button type="button" class="btn btn-default" id="GetCards" ng-click="GetCards()">Deal Cards</button></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/Angular/ng-controller-pokerApp.js"></script>

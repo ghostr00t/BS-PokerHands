@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PokerCardDeckModelStoreContainer" CdmEntityContainer="TravieIOEntities">
+    <EntitySetMapping Name="CardDecks">
+      <EntityTypeMapping TypeName="PokerCardDeckModel.CardDeck">
+        <MappingFragment StoreEntitySet="CardDeck">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Suit" ColumnName="Suit" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
